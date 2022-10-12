@@ -1,0 +1,38 @@
+
+.large-input{
+    width: 100%;
+    height: 70px;
+}
+.small-input {
+  width: 100%;
+  height: 30px;
+}
+.long-input{
+    height: 30px;
+}
+
+input[type=text], select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    background-color: rgb(241, 247, 253);
+  }
+  select{
+    width: 100%;
+    height: 30px;
+  }
+  .long-input{
+    width: 400px;
+  }
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+.gsp-form{
+    width: 100%;
+    background-color: rgb(232, 232, 250);
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}

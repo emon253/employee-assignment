@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="table-search">
+    <form class="d-flex m-2">
+      <input
+        class="form-control me-2 w-75"
+        type="search"
+        placeholder="Enter Client Name"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">
+        Search By Client
+      </button>
+    </form>
+  </div>
+  <div class="client-table mt-3">
+    <table>
+      <thead style="position: sticky;top: 0;">
+        <tr style="background-color: rgb(232, 232, 250);height: 50px;">
+          <th scope="col">#SL</th>
+          <th scope="col">Invoice No</th>
+          <th scope="col">Invoice Date</th>
+          <th scope="col">View</th>
+        </tr>
+      </thead>
+
+      <ng-container *ngFor="let client of clients">
+        <tr>
+          <td scope="row">{{ client.serial }}</td>
+          <td>{{ client.name }}</td>
+          <td>{{ client.invoiceDate }}</td>
+          <td>
+            <button
+              routerLink="view-gsp"
+              type="button"
+              class="btn btn-outline-secondary"
+            >
+              View Bill
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>
