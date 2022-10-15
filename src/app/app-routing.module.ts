@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './pages/client/client.component';
 import { TestComponent } from './pages/test/test.component';
 import { ViewgspComponent } from './pages/viewgsp/viewgsp.component';
+import { Viewgsp2Component } from './pages/viewgsp2/viewgsp2.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'view-gsp',
     component: ViewgspComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'view-gsp2',
+    component: Viewgsp2Component,
     pathMatch:'full'
   },
   {

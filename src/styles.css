@@ -12,3 +12,181 @@ body {
 .nav-logo {
   width: 150px;
 }
+
+
+
+/* my style */
+
+
+
+.form-input {
+  height: auto;
+  background-color: rgb(241, 247, 253);
+  position: relative;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+.form-element-input {
+  outline: none;
+  height: 1.5rem;
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border: 0;
+  line-height: 1.5;
+  width: 100%;
+  color: #333;
+  box-shadow: none;
+  opacity: 0.001;
+  transition: opacity 0.28s ease;
+  will-change: opacity;
+}
+
+.form-element-input::placeholder {
+  color: #a6a6a6;
+  transform: scale(0.9);
+  transform-origin: left top;
+}
+
+.form-element-bar {
+  height: 1px;
+  background: #999;
+  position: relative;
+  display: block;
+}
+
+.form-element-bar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #337ab7;
+  height: 2px;
+  display: block;
+  transform: rotateY(90deg);
+  transition: transform .28s ease;
+  will-change: transform;
+}
+
+.form-element-label {
+  position: absolute;
+  top: .85rem;
+  line-height: 1.5rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  font-size: 1rem;
+  margin: 0;
+  color: black;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  transition: transform .28s ease, color .28s linear, opacity .28s linear;
+  will-change: transform, color, opacity;
+  cursor:text;
+}
+
+.form-element-hint {
+  color: #aaa;
+}
+
+
+
+
+.form-element-input.hasValue ~ .form-element-bar::after,
+.form-element-input:focus ~ .form-element-bar::after {
+  transform: rotateY(0deg);
+}
+.form-element-input.hasValue ~ .form-element-label,
+.form-element-input:focus ~ .form-element-label {
+  color: #337ab7;
+}
+.form-element-input.hasValue,
+.form-element-input:focus {
+  opacity: 1;
+}
+.form-element-input.hasValue ~ .form-element-label,
+.form-element-input:focus ~ .form-element-label {
+  transform: translateY(-100%) translateY(-0.5em) translateY(-2px);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+
+.form-is-success .form-element-input,
+.form-is-success .form-element-label,
+.form-is-success .form-element-hint {
+  color: #259337;
+}
+
+
+.form-has-error .form-element-label.form-element-label,
+.form-has-error .form-element-hint {
+  color: #d9534f;
+}
+
+.form-has-error .form-element-bar:after {
+  background: #d9534f;
+}
+
+.form-has-error .form-element-input.hasValue ~ .form-element-label,
+.form-has-error .form-element-input:focus ~ .form-element-label {
+  transform: translateY(-100%) translateY(-0.5em) translateY(-2px);
+  color: #d9534f;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+
+
+/* my style */
+
+
+
+/*Responsive grid stars*/
+* {
+  box-sizing: border-box;
+}
+
+.el-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="el-col-"] {
+  float: left;
+
+}
+
+.el-col-1 {width: 8.33%;}
+.el-col-2 {width: 16.66%;}
+.el-col-3 {width: 25%;}
+.el-col-4 {width: 33.33%;}
+.el-col-5 {width: 41.66%;}
+.el-col-6 {width: 50%;}
+.el-col-7 {width: 58.33%;}
+.el-col-8 {width: 66.66%; padding: 0.5;}
+.el-col-9 {width: 75%;}
+.el-col-10 {width: 83.33%;}
+.el-col-11 {width: 91.66%;}
+.el-col-12 {width: 100%;}
+/*Responsive grid ends*/
+
+/* container */
+.el-container{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+/* container */
+
+
+/* Other css */
+.el-ml-2{
+  margin-left: 2%;
+}
+.el-ml-3{
+  margin-left: 3%;
+}
